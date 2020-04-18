@@ -1,1 +1,1 @@
-Worker: node AllMight.js
+Worker: node Senku.js
