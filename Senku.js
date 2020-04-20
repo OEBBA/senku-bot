@@ -104,12 +104,11 @@ fs.readdir(__dirname + '/images', function (err, files) {
         /*
           You have two options here. Either you will keep your bot running, and upload images using setInterval (see below; 10000 means '10 milliseconds', or 10 seconds), --
         */
-        upload_random_image(images);
-        i++;
+    
         setInterval(function () {
             upload_random_image(images);
             i++;
-        }, 1000 * 60 * 420);
+        }, 1000 * 60 * 720);
 
         //Second Sequence
 
@@ -147,12 +146,8 @@ fs.readdir(__dirname + '/images', function (err, files) {
             });
         }
 
-
-        setInterval(function () {
-            upload_random_tip(images);
-            i++;
-        }, 1000 * 60 * 1440);
-
+        upload_random_tip(images);
+        i++;
         /*
           Or you could use cron (code.tutsplus.com/tutorials/scheduling-tasks-with-cron-jobs--net-8800), in which case you just need:
         */
