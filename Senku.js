@@ -156,7 +156,7 @@ fs.readdir(__dirname + '/images', function (err, files) {
 
         //Reply to questions
 
-        var stream = T.stream('statuses/filter', { track: ['@TheSenkuBot'] })
+        var stream = T.stream('statuses/filter', { track: ['#AskSenku'] })
         stream.on('tweet', function (tweet) {
             console.log(tweet.text)
             var question = tweet.text.replace('@TheSenkuBot', '');
