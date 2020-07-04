@@ -170,6 +170,7 @@ fs.readdir(__dirname + '/images', function (err, files) {
                     }
 
                     tweet.status = result;
+                    console.log(result);
 
                     T.post('statuses/update', tweet, tweeted);
 
@@ -177,22 +178,6 @@ fs.readdir(__dirname + '/images', function (err, files) {
                         if (err) {
                             console.log("Something Went Wrong")
                         } else console.log("It Worked")
-                    }
-                }, function notime(){
-                    tweet = {
-                        in_reply_to_status_id: tweet.id_str,
-                        auto_populate_reply_metadata: true,
-                        status: ''
-                    }
-
-                    tweet.status = "I have no time to answer something like this! I'm busy!";
-
-                    T.post('statuses/update', tweet, tweeted);
-
-                    function tweeted(err, data, response) {
-                        if (err) {
-                            console.log("Something Went Wrong")
-                        } else console.log("No time")
                     }
                 });
 
