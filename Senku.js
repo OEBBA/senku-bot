@@ -159,7 +159,7 @@ fs.readdir(__dirname + '/images', function (err, files) {
         var stream = T.stream('statuses/filter', { track: ['#AskSenku'] })
         stream.on('tweet', function (tweet) {
             console.log(tweet.text)
-            var question = tweet.text.replace('@TheSenkuBot', '');
+            var question = tweet.text.replace('#AskSenku', '');
             waApi.getShort(question).then(
                 function (result) {
 
