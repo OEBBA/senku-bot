@@ -148,15 +148,13 @@ fs.readdir(__dirname + '/images', function (err, files) {
 
         upload_random_tip(images);
         i++;
-        /*
-          Or you could use cron (code.tutsplus.com/tutorials/scheduling-tasks-with-cron-jobs--net-8800), in which case you just need:
-        */
+     ]
 
         // upload_random_image(images);
 
         //Reply to questions(broken)
 
-        var stream = T.stream('statuses/filter', { track: ['#AskSenku'] })
+      /*  var stream = T.stream('statuses/filter', { track: ['#AskSenku'] })
         stream.on('tweet', function (tweet) {
             console.log(tweet.text)
             var question = tweet.text.replace('#AskSenku', '');
@@ -199,4 +197,4 @@ fs.readdir(__dirname + '/images', function (err, files) {
 
         })
     }
-});
+});*/
