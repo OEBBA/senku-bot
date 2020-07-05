@@ -154,7 +154,7 @@ fs.readdir(__dirname + '/images', function (err, files) {
 
         // upload_random_image(images);
 
-        //Reply to questions
+        //Reply to questions(broken)
 
         var stream = T.stream('statuses/filter', { track: ['#AskSenku'] })
         stream.on('tweet', function (tweet) {
