@@ -154,7 +154,7 @@ fs.readdir(__dirname + '/images', function (err, files) {
 
         //Reply to questions(broken)
 
-      /*  var stream = T.stream('statuses/filter', { track: ['#AskSenku'] })
+      var stream = T.stream('statuses/filter', { track: ['#AskSenku'] })
         stream.on('tweet', function (tweet) {
             console.log(tweet.text)
             var question = tweet.text.replace('#AskSenku', '');
@@ -195,6 +195,6 @@ fs.readdir(__dirname + '/images', function (err, files) {
                     }
                 });
 
-        })*/
+        })
     }
 });
