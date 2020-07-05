@@ -196,5 +196,5 @@ fs.readdir(__dirname + '/images', function (err, files) {
                 });
 
         })
-    }
-});*/
+    }*/
+});
