@@ -161,7 +161,7 @@ fs.readdir(__dirname + '/images', function (err, files) {
             console.log(tweet.text)
             var question = tweet.text.replace('#AskSenku', '');
             waApi.getShort(question).then(
-                function (result) {
+                function answer(result) {
 
                     tweet = {
                         in_reply_to_status_id: tweet.id_str,
@@ -170,7 +170,7 @@ fs.readdir(__dirname + '/images', function (err, files) {
                     }
 
                     tweet.status = result;
-                    console.log(result);
+                    console.log(result + ': answer');
 
                     T.post('statuses/update', tweet, tweeted);
 
